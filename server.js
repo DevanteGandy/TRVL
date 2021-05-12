@@ -9,13 +9,6 @@ app.use(express.json())
 const trvlController = require('./controllers/trvl_controller.js')
 app.use('/trvl', trvlController)
 
-PORT = process.env.PORT
-
-
-
-
-app.use('trvl', trvlController)
-
 app.use(express.static('public'))
 
 
