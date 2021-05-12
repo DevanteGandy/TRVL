@@ -3,11 +3,24 @@ const mongoose = require('mongoose')
 const app = express()
 require('dotenv').config()
 const MONGODB_URI = process.env.MONGODB_URI
+<<<<<<< HEAD
 
 PORT = process.env.PORT
 app.use(express.json())
 const trvlController =require('./controllers/trvl_controller.js')
 app.use('/trvl', trvlController)
+=======
+
+PORT = process.env.PORT
+
+const trvlController =require('./controllers/trvl_controller.js')
+
+
+app.use('trvl', trvlController)
+
+
+
+>>>>>>> 25ff8f198946cd7afb4bbbdc89df88c97b830236
 
 
 app.listen(PORT, ()=>{
