@@ -41,7 +41,6 @@ trvl.delete('/:id',(req,res) => {
     })
   })
 })
-=======
 
 trvl.get('/', (req, res) => {
   res.send('index')
