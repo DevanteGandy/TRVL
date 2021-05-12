@@ -1,3 +1,4 @@
 # TRVL
 
-Charlie Arboleda
+- Charlie Arboleda
+- Devante Gandy
