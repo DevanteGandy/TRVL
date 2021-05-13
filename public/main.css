@@ -29,3 +29,67 @@
 
 
 /* Entries */
+h1,h2 {
+  text-align: center;
+  font-family: 'Pangolin', cursive;
+  text-shadow: 1px 1px 2px tomato;
+}
+.vent {
+  font-size: 100px;
+}
+.entries {
+  font-size: 34px;
+}
+h3 {
+  text-align: center;
+  text-shadow: 1px 1px 2px gold;
+}
+figcaption {
+  font-size: 24px;
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+img {
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#entry-ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+#entry-logs {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-basis: 28%;
+  margin: 2%;
+  background: #12121212;
+  box-sizing: border-box;
+  padding: 2%;
+  box-shadow: 2px 2px 4px tomato;
+}
+
+button {
+  background: tomato;
+  padding: 0.5em;
+  margin: 0.5em;
+}
+.star {
+  color: goldenrod;
+  font-size: 2.0rem;
+  padding: 0 1rem;
+}
+.star:before{
+  content: '\2606';
+  cursor: pointer;
+}
+.star.rated::before{
+  content: '\2605';
+}

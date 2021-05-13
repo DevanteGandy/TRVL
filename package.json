@@ -21,6 +21,7 @@
     "dotenv": "^9.0.2",
     "epress": "0.0.1-security",
     "express": "^4.17.1",
-    "mongoose": "^5.12.8"
+    "mongoose": "^5.12.8",
+    "react-native-hr-component": "^2.0.3"
   }
 }
