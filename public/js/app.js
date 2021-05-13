@@ -38,73 +38,46 @@ updateTrvl = event => {
   render = () =>{
     return <div className ='trvl-log'>
     <h2>Create New Travel Log</h2>
-    <details>
-    <summary> Click to add! </summary>
     <form onSubmit={this.handleSubmit}>
-          <label htmlFor="entryTitle">Entry Title</label>
-          <br />
-          <input type="text" id="entryTitle" onChange={this.handleChange} />
-          <br />
-          <label htmlFor="date">Date</label>
-          <br />
-          <input type="date" id="date" onChange={this.handleChange} />
-          <br />
-          <label htmlFor="image">Image</label>
-          <br />
-          <input type="text" id="image" onChange={this.handleChange} />
-          <br />
-          <label htmlFor="comments">Comment</label>
-          <br />
-          <input type="text" id="comments" onChange={this.handleChange} />
-          <br />
-          <input type="submit" value="New Post" />
-    </form>
-    </details>
-    <h2> Travel Entries </h2>
-    <ul>
-    {this.state.trvl.map((trvl) => {
-      return (
-        <li>
-        <h3> {trvl.entryTitle} </h3>
-        <p> {trvl.date} </p>
-        <br />
-        <figure>
-        <img src={trvl.image} />
-        <figcaption>{trvl.comments} </figcaption>
-        <br />
-        <button value={trvl._id} onClick={this.deleteTrvl}> Delete Log </button>
-        </figure>
-        <br />
-        <details>
-        <summary> Edit {trvl.entryTitle} </summary>
-        <form id={trvl._id} onSubmit={this.updateTrvl}>
-        <label htmlFor="entryTitle">Entry Title</label>
-        <br />
+    <div className='row'>
+      <div className='col-25'>
+        <label id='new-logs' htmlFor="entryTitle">Entry Title</label>
+      </div>
+      <div className='col-75'>
         <input type="text" id="entryTitle" onChange={this.handleChange} />
-        <br />
-        <label htmlFor="date">Date</label>
-        <br />
+      </div>
+    </div>
+    <div className='row'>
+      <div className='col-25'>
+        <label id='new-logs' htmlFor="date">Date</label>
+      </div>
+      <div className='col-75'>
         <input type="date" id="date" onChange={this.handleChange} />
-        <br />
-        <label htmlFor="image">Image</label>
-        <br />
+      </div>
+    </div>
+    <div className='row'>
+      <div className='col-25'>
+        <label id='new-logs' htmlFor="image">Image</label>
+      </div>
+      <div className='col-75'>
         <input type="text" id="image" onChange={this.handleChange} />
-        <br />
-        <label htmlFor="comments">Comment</label>
-        <br />
-        <input type="text" id="comments" onChange={this.handleChange} />
-        <br />
-        <input type="submit" value="Update Entry" />
-        </form>
-        </details>
-            </li>
-      )
-    })}
-    </ul>
+      </div>
+    </div>
+    <div className='row'>
+      <div className='col-25'>
+        <label id='new-logs' htmlFor="comments">Comment</label>
+      </div>
+      <div className='col-75'>
+        <textarea id="comments" onChange={this.handleChange} />
+      </div>
+    </div>
+    <div className="row">
+        <input type="submit" value="New Post" />
+      </div>
+    </form>
     </div>
   }
 }
-
 ReactDOM.render(
   <Trvls></Trvls>,
   document.querySelector('main')
