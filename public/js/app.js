@@ -86,7 +86,7 @@ updateTrvl = event => {
       return (
         <div className="entry-container">
         <li id='entry-logs'>
-
+<br />
         <h3> {trvl.entryTitle} </h3>
         <p> {trvl.date} </p>
         <br />
