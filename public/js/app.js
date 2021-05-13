@@ -1,6 +1,7 @@
 
-
 class Trvls extends React.Component {
+
+
 state = {
   entryTitle: '',
   date: '',
@@ -92,11 +93,6 @@ updateTrvl = event => {
         <figure>
         <img src={trvl.image} />
         <div className ='stars' data-rating='3'>
-          <span className='star'>&nbsp;</span>
-          <span className='star'>&nbsp;</span>
-          <span className='star'>&nbsp;</span>
-          <span className='star'>&nbsp;</span>
-          <span className='star'>&nbsp;</span>
         </div>
         <br />
         <figcaption>{trvl.comments} </figcaption>
