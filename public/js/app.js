@@ -8,7 +8,8 @@ state = {
   image: '',
   rating:'',
   comments: '',
-  trvl: []
+  trvl: [],
+  users: []
 }
 handleSubmit = event => {
   event.preventDefault()
@@ -26,6 +27,15 @@ componentDidMount = () => {
     this.setState({trvl: response.data})
   })
 }
+
+userComponent = () =>{
+  axios.get('/users').then(response =>{
+    this.setState({
+      user: response.session.currentUser.username
+    })
+  })
+}
+
 deleteTrvl = event => {
   axios.delete('/trvl/' + event.target.value).then(response => {
     this.setState({trvl:response.data})
@@ -41,6 +51,9 @@ updateTrvl = event => {
   render = () =>{
     return <div className ='trvl-log'>
     <h2>Create New Travel Log</h2>
+    <h2>{this.users}</h2>
+    <Signup></Signup>
+    <Login></Login>
     <form onSubmit={this.handleSubmit}>
     <div className='row'>
       <div className='col-25'>

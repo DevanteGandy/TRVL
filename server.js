@@ -2,6 +2,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
 const session = require('express-session')
+const methodOverride = require('method-override')
 require('dotenv').config()
 const MONGODB_URI = process.env.MONGODB_URI
 
@@ -9,6 +10,7 @@ PORT = process.env.PORT
 app.use(express.json())
 const trvlController = require('./controllers/trvl_controller.js')
 app.use('/trvl', trvlController)
+app.use(methodOverride('_method'))
 app.use(
   session({
     secret:process.env.SECRET,
@@ -18,7 +20,13 @@ app.use(
 )
 app.use(express.static('public'))
 
+app.use(express.urlencoded({ extended: false }))
 
+const userController = require('./controllers/users_controller.js')
+app.use('/users', userController)
+
+const sessionsController = require('./controllers/sessions_controller.js')
+app.use('/sessions', sessionsController)
 
 app.listen(PORT, ()=>{
   console.log('Everything is fine at port ', PORT)

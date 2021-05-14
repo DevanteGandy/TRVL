@@ -1,6 +1,7 @@
 const express = require('express')
 const trvl = express.Router()
 const Trvl = require('../models/trvl.js')
+const session = require('express-session')
 
 // INDEX
 trvl.get('/', (req, res) => {
