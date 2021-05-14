@@ -85,6 +85,7 @@ figcaption {
   margin: auto;
   display: block;
   text-align: center;
+  font-family: 'Domine', serif;
 }
 #trvlImg {
   width: 75%;
@@ -110,6 +111,7 @@ figcaption {
   box-sizing: border-box;
   padding: 2%;
   box-shadow: 2px 2px 4px tomato;
+
 }
 
 button {

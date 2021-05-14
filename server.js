@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
+const session = require('express-session')
 require('dotenv').config()
 const MONGODB_URI = process.env.MONGODB_URI
 
@@ -8,7 +9,13 @@ PORT = process.env.PORT
 app.use(express.json())
 const trvlController = require('./controllers/trvl_controller.js')
 app.use('/trvl', trvlController)
-
+app.use(
+  session({
+    secret:process.env.SECRET,
+    resave: false,
+    saveUninitialized: false
+  })
+)
 app.use(express.static('public'))
 
 

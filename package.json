@@ -18,11 +18,14 @@
   },
   "homepage": "https://github.com/DevanteGandy/TRVL#readme",
   "dependencies": {
+    "@auth0/auth0-react": "^1.5.0",
+    "bcrypt": "^5.0.1",
     "dotenv": "^9.0.2",
     "epress": "0.0.1-security",
     "express": "^4.17.1",
     "mongoose": "^5.12.8",
     "react-native-hr-component": "^2.0.3",
-    "react-rating-system": "^1.0.7"
+    "react-rating-system": "^1.0.7",
+    "session": "^0.1.0"
   }
 }
