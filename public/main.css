@@ -24,33 +24,69 @@
 .active {
   background-color: #4CAF50;
 }
-/* Forms */
+#header {
+color: #111;
+font-family: 'Helvetica Neue', sans-serif;
+font-size: 275px;
+font-weight: bold;
+letter-spacing: -1px;
+line-height: 1;
+text-align: center;
+text-shadow: 3px 3px 3px red, 7px 7px 7px blue;
+}
 
+/* Forms */
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+#travelLog {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
 
 
 /* Entries */
-h1,h2 {
-  text-align: center;
-  font-family: 'Pangolin', cursive;
-  text-shadow: 1px 1px 2px tomato;
-}
-.vent {
-  font-size: 100px;
-}
-.entries {
-  font-size: 34px;
-}
-h3 {
-  text-align: center;
-  text-shadow: 1px 1px 2px gold;
-}
+
 figcaption {
   font-size: 24px;
   margin: auto;
   display: block;
   text-align: center;
 }
-img {
+#trvlImg {
   width: 75%;
   margin-left: auto;
   margin-right: auto;
@@ -80,16 +116,4 @@ button {
   background: tomato;
   padding: 0.5em;
   margin: 0.5em;
-}
-.star {
-  color: goldenrod;
-  font-size: 2.0rem;
-  padding: 0 1rem;
-}
-.star:before{
-  content: '\2606';
-  cursor: pointer;
-}
-.star.rated::before{
-  content: '\2605';
 }

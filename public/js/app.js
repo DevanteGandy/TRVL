@@ -40,6 +40,59 @@ updateTrvl = event => {
 }
   render = () =>{
     return <div className ='trvl-log'>
+
+
+    <h2> Travel Entries </h2>
+    <ul id='entry-ul'>
+
+    {this.state.trvl.map((trvl) => {
+      return (
+        <div className="entry-container">
+        <li id='entry-logs'>
+        <div id='titleDate'>
+        <h3> {trvl.entryTitle} </h3>
+        <p> {trvl.date} </p>
+        </div>
+        <br />
+        <figure>
+        <img src={trvl.image} id='trvlImg'/>
+        <div className ='stars' data-rating='3'>
+        </div>
+        <br />
+        <figcaption>{trvl.comments} </figcaption>
+        <br />
+        <button value={trvl._id} onClick={this.deleteTrvl}> Delete Log </button>
+        </figure>
+        <br />
+        <details>
+        <summary> Edit {trvl.entryTitle} </summary>
+        <form id={trvl._id} onSubmit={this.updateTrvl}>
+        <label  htmlFor="entryTitle">Entry Title</label>
+        <br />
+        <input type="text" id="entryTitle" onChange={this.handleChange} />
+        <br />
+        <label htmlFor="date">Date</label>
+        <br />
+        <input type="date" id="date" onChange={this.handleChange} />
+        <br />
+        <label htmlFor="image">Image</label>
+        <br />
+        <input type="text" id="image" onChange={this.handleChange} />
+        <br />
+        <label htmlFor="comments">Comment</label>
+        <br />
+        <input type="text" id="comments" onChange={this.handleChange} />
+        <br />
+        <input type="submit" value="Update Entry" />
+        </form>
+        </details>
+            </li>
+            </div>
+
+      )
+    })}
+    </ul>
+    <div id='travelLog'>
     <h2>Create New Travel Log</h2>
     <form onSubmit={this.handleSubmit}>
     <div className='row'>
@@ -78,59 +131,11 @@ updateTrvl = event => {
         <input type="submit" value="New Post" />
       </div>
     </form>
-
-    <h2> Travel Entries </h2>
-    <ul id='entry-ul'>
-
-    {this.state.trvl.map((trvl) => {
-      return (
-        <div className="entry-container">
-        <li id='entry-logs'>
-<br />
-        <h3> {trvl.entryTitle} </h3>
-        <p> {trvl.date} </p>
-        <br />
-        <figure>
-        <img src={trvl.image} />
-        <div className ='stars' data-rating='3'>
-        </div>
-        <br />
-        <figcaption>{trvl.comments} </figcaption>
-        <br />
-        <button value={trvl._id} onClick={this.deleteTrvl}> Delete Log </button>
-        </figure>
-        <br />
-        <details>
-        <summary> Edit {trvl.entryTitle} </summary>
-        <form id={trvl._id} onSubmit={this.updateTrvl}>
-        <label  htmlFor="entryTitle">Entry Title</label>
-        <br />
-        <input type="text" id="entryTitle" onChange={this.handleChange} />
-        <br />
-        <label htmlFor="date">Date</label>
-        <br />
-        <input type="date" id="date" onChange={this.handleChange} />
-        <br />
-        <label htmlFor="image">Image</label>
-        <br />
-        <input type="text" id="image" onChange={this.handleChange} />
-        <br />
-        <label htmlFor="comments">Comment</label>
-        <br />
-        <input type="text" id="comments" onChange={this.handleChange} />
-        <br />
-        <input type="submit" value="Update Entry" />
-        </form>
-        </details>
-            </li>
-            </div>
-
-      )
-    })}
-    </ul>
+    </div>
     </div>
   }
 }
+
 ReactDOM.render(
   <Trvls></Trvls>,
   document.querySelector('main')
