@@ -1,4 +1,3 @@
-
 class Trvls extends React.Component {
 
 
@@ -9,7 +8,8 @@ state = {
   rating:'',
   comments: '',
   trvl: [],
-  users: []
+  users: {},
+  name:{}
 }
 handleSubmit = event => {
   event.preventDefault()
@@ -31,7 +31,8 @@ componentDidMount = () => {
 userComponent = () =>{
   axios.get('/users').then(response =>{
     this.setState({
-      user: response.session.currentUser.username
+      users: response.data,
+      name: response.data.username
     })
   })
 }
