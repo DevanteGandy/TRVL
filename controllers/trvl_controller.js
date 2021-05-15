@@ -2,6 +2,13 @@ const express = require('express')
 const trvl = express.Router()
 const Trvl = require('../models/trvl.js')
 
+const isAuthenticated = (req, res, next) => {
+  if (req.session.currentUser) {
+    return next()
+  } else {
+    res.redirect('/sessions/new')
+  }
+}
 // INDEX
 trvl.get('/', (req, res) => {
   Trvl.find({},(err,foundTrvl) => {

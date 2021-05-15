@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #ceebfd;
 }
 
 #nav-li {
@@ -19,10 +19,10 @@
 }
 
 #nav-li, a:hover {
-  background-color: #111;
+  background-color: #84CDFA;
 }
 .active {
-  background-color: #4CAF50;
+  background-color: #33ff9c;
 }
 #header {
 color: #111;
@@ -34,6 +34,77 @@ line-height: 1;
 text-align: center;
 text-shadow: 3px 3px 3px red, 7px 7px 7px blue;
 }
+body {
+  background-color: #f1f1f1;
+}
+.slide-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f1f1f1;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  height: 600px;
+}
+
+.perspective-text {
+  color: white;
+  font-family: Arial;
+  font-size: 58px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.perspective-line {
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+}
+
+p {
+  margin: 0;
+  height: 50px;
+  line-height: 50px;
+  transition: all 0.5s ease-in-out;
+}
+
+.perspective-line:nth-child(odd) {
+  transform: skew(60deg, -30deg) scaleY(0.667);
+}
+
+.perspective-line:nth-child(even) {
+  transform: skew(0deg, -30deg) scaleY(1.337);
+}
+
+.perspective-text:hover p {
+  transform: translate(0, -50px);
+}
+
+.perspective-line:nth-child(1) {
+  left: 29px;
+}
+
+.perspective-line:nth-child(2) {
+  left: 58px;
+  background: #33ff9c;
+}
+
+.perspective-line:nth-child(3) {
+  left: 87px;
+  background: #84cdfa;
+}
+
+.perspective-line:nth-child(4) {
+  left: 116px;
+  background: #5ad1cd;
+}
+
+.perspective-line:nth-child(5) {
+  left: 145px;
+}
+
 
 /* Forms */
 input[type=text], select {

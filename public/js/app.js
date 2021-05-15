@@ -1,7 +1,5 @@
 
 class Trvls extends React.Component {
-
-
 state = {
   entryTitle: '',
   date: '',
