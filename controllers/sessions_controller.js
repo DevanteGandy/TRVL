@@ -14,7 +14,7 @@ sessions.post ('/', (req,res)=>{
     } else if (!foundUser){
       res.send('<a href="/"> Sorry, no user found </a>')
     } else {
-      if (bcrypt.compareSync(req.bosy.password, foundUser.password)) {
+      if (bcrypt.compareSync(req.body.password, foundUser.password)) {
         req.session.currentUser = foundUser
         res.redirect('/')
       } else {

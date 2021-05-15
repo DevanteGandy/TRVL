@@ -23,6 +23,8 @@
     "dotenv": "^9.0.2",
     "epress": "0.0.1-security",
     "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "method-override": "^3.0.0",
     "mongoose": "^5.12.8",
     "react-native-hr-component": "^2.0.3",
     "react-rating-system": "^1.0.7",
