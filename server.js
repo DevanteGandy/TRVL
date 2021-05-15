@@ -3,29 +3,20 @@ const mongoose = require('mongoose')
 const app = express()
 const session = require('express-session')
 const methodOverride = require('method-override')
-<<<<<<< HEAD
 
-=======
->>>>>>> 684b8c315c2d9637e64095f48f51b6869cefc62a
 require('dotenv').config()
 const MONGODB_URI = process.env.MONGODB_URI
 
 PORT = process.env.PORT
 app.use(express.json())
 
-const sessionsController = require('./controllers/sessions_controller.js')
-app.use('/sessions', sessionsController)
-const userController = require('./controllers/users_controller.js')
-app.use('/users', userController)
+
 const trvlController = require('./controllers/trvl_controller.js')
 app.use('/trvl', trvlController)
-<<<<<<< HEAD
 
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({ extended: true }))
-=======
 app.use(methodOverride('_method'))
->>>>>>> 684b8c315c2d9637e64095f48f51b6869cefc62a
 app.use(
   session({
     secret: process.env.SECRET,
