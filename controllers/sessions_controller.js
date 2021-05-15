@@ -1,9 +1,16 @@
 const bcrypt = require('bcrypt')
 const express = require('express')
-
 const sessions = express.Router()
-
 const User = require('../models/users.js')
+
+
+sessions.get('/', (req, res) =>{
+  User.find({}, (err, foundUser)=>{
+    res.json(foundUser, {
+      currentUser: req.session.currentUser
+    })
+  })
+})
 
 sessions.post ('/', (req,res)=>{
   User.findOne({
