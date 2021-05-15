@@ -1,6 +1,4 @@
 class Trvls extends React.Component {
-
-
 state = {
   entryTitle: '',
   date: '',
@@ -51,10 +49,10 @@ updateTrvl = event => {
 }
   render = () =>{
     return <div className ='trvl-log'>
-    <h2>Create New Travel Log</h2>
-    <h2>{this.users}</h2>
-    <Signup></Signup>
-    <Login></Login>
+    <Header></Header>
+    <Logo></Logo>
+    <div id='travelLog'>
+    <h3>Create New Travel Log</h3>
     <form onSubmit={this.handleSubmit}>
     <div className='row'>
       <div className='col-25'>
@@ -92,26 +90,23 @@ updateTrvl = event => {
         <input type="submit" value="New Post" />
       </div>
     </form>
-
-    <h2> Travel Entries </h2>
+    </div>
+        <h2> Entries </h2>
     <ul id='entry-ul'>
-
     {this.state.trvl.map((trvl) => {
       return (
         <div className="entry-container">
         <li id='entry-logs'>
-<br />
+        <div id='titleDate'>
         <h3> {trvl.entryTitle} </h3>
         <p> {trvl.date} </p>
+        </div>
         <br />
         <figure>
-        <img src={trvl.image} />
-        <div className ='stars' data-rating='3'>
-        </div>
+        <img src={trvl.image} id='trvlImg'/>
         <br />
         <figcaption>{trvl.comments} </figcaption>
         <br />
-        <button value={trvl._id} onClick={this.deleteTrvl}> Delete Log </button>
         </figure>
         <br />
         <details>
@@ -134,6 +129,7 @@ updateTrvl = event => {
         <input type="text" id="comments" onChange={this.handleChange} />
         <br />
         <input type="submit" value="Update Entry" />
+        <button value={trvl._id} onClick={this.deleteTrvl}> Delete Log </button>
         </form>
         </details>
             </li>
@@ -142,9 +138,12 @@ updateTrvl = event => {
       )
     })}
     </ul>
+    <About></About>
+
     </div>
   }
 }
+
 ReactDOM.render(
   <Trvls></Trvls>,
   document.querySelector('main')

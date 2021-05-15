@@ -1,8 +1,6 @@
 const bcrypt = require('bcrypt')
 const express = require('express')
-
 const users = express.Router()
-
 const User = require('../models/users.js')
 
 users.get('/login', (req, res) =>{
@@ -13,7 +11,12 @@ users.get('/login', (req, res) =>{
   })
 })
 
+<<<<<<< HEAD
 users.post('/signup', (req,res)=>{
+=======
+
+users.post('/', (req,res)=>{
+>>>>>>> a246b6976e840c8230b640b2e7cec79cc86bdd90
   req.body.username = req.body.username
   req.body.password = bcrypt.hashSync(
     req.body.password,
@@ -23,6 +26,7 @@ users.post('/signup', (req,res)=>{
     res.redirect('/')
   })
 })
+
 
 
 
