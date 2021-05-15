@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #ceebfd;
+  background-color: #9365F6;
 }
 
 #nav-li {
@@ -19,10 +19,10 @@
 }
 
 #nav-li, a:hover {
-  background-color: #84CDFA;
+  background-color: #786BD6;
 }
 .active {
-  background-color: #33ff9c;
+  background-color: #65A4F6;
 }
 #header {
 color: #111;
@@ -88,17 +88,17 @@ p {
 
 .perspective-line:nth-child(2) {
   left: 58px;
-  background: #33ff9c;
+  background: #786BD6;
 }
 
 .perspective-line:nth-child(3) {
   left: 87px;
-  background: #84cdfa;
+  background: #6B74EB;
 }
 
 .perspective-line:nth-child(4) {
   left: 116px;
-  background: #5ad1cd;
+  background: #786BD6;
 }
 
 .perspective-line:nth-child(5) {
@@ -134,7 +134,7 @@ input[type=submit]:hover {
 
 #travelLog {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: #E1E1E1;
   padding: 20px;
 }
 textarea {
@@ -178,10 +178,10 @@ figcaption {
   align-items: center;
   flex-basis: 28%;
   margin: 2%;
-  background: #12121212;
+  background: #f1f1f1;
   box-sizing: border-box;
   padding: 2%;
-  box-shadow: 2px 2px 4px tomato;
+  box-shadow: 2px 2px 4px #786BD6;
 
 }
 
