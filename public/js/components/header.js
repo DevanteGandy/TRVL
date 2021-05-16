@@ -24,7 +24,10 @@ class Header extends React.Component {
           <details>
           <br />
             <summary>Login</summary>
-            <Login></Login>
+            <Login
+            logIn={this.props.logIn}
+            handleChange={this.props.handleChange}
+            ></Login>
           </details>
         </li>
       </ul>
