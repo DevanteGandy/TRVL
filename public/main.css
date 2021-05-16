@@ -70,7 +70,11 @@ h1,h2 {
   text-align: center;
   font-family: 'Domine', serif;
   text-shadow: 1px 1px 2px white;
+<<<<<<< HEAD
 }
+=======
+
+>>>>>>> 8040fc5da775b6690f3c94ff0ce2b274c5e62722
 p {
   margin: 0;
   height: 50px;
@@ -91,7 +95,11 @@ h3 {
   text-align: center;
   text-shadow: 1px 1px 1px paleturquoise;
   font-family: 'Domine', serif;
+<<<<<<< HEAD
 }
+=======
+
+>>>>>>> 8040fc5da775b6690f3c94ff0ce2b274c5e62722
 
 .perspective-text:hover p {
   transform: translate(0, -50px);
@@ -211,6 +219,10 @@ justify-content: space-around;
   background: #E1E1E1;
   box-sizing: border-box;
   padding: 2%;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 8040fc5da775b6690f3c94ff0ce2b274c5e62722
   box-shadow: 2px 2px 4px black;
   background-color: #FFEBCD;
 
