@@ -1,24 +1,24 @@
 class Logo extends React.Component {
   render = () => {
-    return <div class="slide-container">
-    <div class="perspective-text">
-     <div class="perspective-line">
+    return <div className="slide-container">
+    <div className="perspective-text">
+     <div className="perspective-line">
        <p></p>
        <p>Awaken</p>
      </div>
-     <div class="perspective-line">
+     <div className="perspective-line">
        <p>Awaken</p>
        <p>To A</p>
      </div>
-     <div class="perspective-line">
+     <div className="perspective-line">
        <p>To A</p>
        <p>Different World</p>
      </div>
-     <div class="perspective-line">
+     <div className="perspective-line">
        <p>Different World</p>
        <p>and TRVL.</p>
      </div>
-     <div class="perspective-line">
+     <div className="perspective-line">
        <p>and TRVL.</p>
        <p></p>
      </div>

@@ -6,9 +6,10 @@ state = {
   rating:'',
   comments: '',
   trvl: [],
-  users: {},
-  name:{}
+  currentUser: {},
 }
+
+
 handleSubmit = event => {
   event.preventDefault()
   axios
@@ -17,20 +18,38 @@ handleSubmit = event => {
     this.setState({trvl: response.data, entryTitle: '',date: '',image: '',rating: '',comments: '',})
   )
 }
+
+
 handleChange = event => {
   this.setState({ [event.target.id]: event.target.value })
 }
-componentDidMount = () => {
+
+
+componentDidMount = (event) => {
   axios.get('/trvl').then(response => {
-    this.setState({trvl: response.data})
+    this.setState({
+      trvl: response.data,
+      currentUser:{},
+    })
   })
 }
 
-userComponent = () =>{
-  axios.get('/users').then(response =>{
+logIn = (event) =>{
+  event.preventDefault()
+  axios.post('/sessions', this.state).then(response =>{
     this.setState({
-      users: response.data,
-      name: response.data.username
+      currentUser: response.data,
+
+    })
+  })
+}
+
+signUp = (event) =>{
+  event.preventDefault()
+  axios.post('/users', this.state).then(response =>{
+    this.setState({
+      currentUser: response.data,
+
     })
   })
 }
@@ -40,6 +59,7 @@ deleteTrvl = event => {
     this.setState({trvl:response.data})
   })
 }
+
 updateTrvl = event => {
   event.preventDefault()
   const id = event.target.id
@@ -49,10 +69,16 @@ updateTrvl = event => {
 }
   render = () =>{
     return <div className ='trvl-log'>
-    <Header></Header>
+    <Header
+      logIn={this.logIn}
+      signUp={this.signUp}
+      handleChange={this.handleChange}
+    ></Header>
+    <h4>{this.state.currentUser.username}</h4>
     <Logo></Logo>
     <div id='travelLog'>
     <h3>Create New Travel Log</h3>
+
     <form onSubmit={this.handleSubmit}>
     <div className='row'>
       <div className='col-25'>

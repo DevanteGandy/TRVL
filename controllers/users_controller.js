@@ -11,19 +11,16 @@ users.get('/login', (req, res) =>{
   })
 })
 
-<<<<<<< HEAD
-users.post('/signup', (req,res)=>{
-=======
+
 
 users.post('/', (req,res)=>{
->>>>>>> a246b6976e840c8230b640b2e7cec79cc86bdd90
   req.body.username = req.body.username
   req.body.password = bcrypt.hashSync(
     req.body.password,
     bcrypt.genSaltSync(10));
   User.create(req.body, (err, createdUser)=>{
     console.log('user is created: ', createdUser)
-    res.redirect('/')
+
   })
 })
 

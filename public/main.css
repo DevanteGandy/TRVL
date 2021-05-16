@@ -64,19 +64,19 @@ body {
   position: relative;
 }
 
-<<<<<<< HEAD
+
 /* Entries */
 h1,h2 {
   text-align: center;
   font-family: 'Domine', serif;
   text-shadow: 1px 1px 2px white;
-=======
+}
 p {
   margin: 0;
   height: 50px;
   line-height: 50px;
   transition: all 0.5s ease-in-out;
->>>>>>> a246b6976e840c8230b640b2e7cec79cc86bdd90
+
 }
 
 .perspective-line:nth-child(odd) {
@@ -86,12 +86,12 @@ p {
 .perspective-line:nth-child(even) {
   transform: skew(0deg, -30deg) scaleY(1.337);
 }
-<<<<<<< HEAD
+
 h3 {
   text-align: center;
   text-shadow: 1px 1px 1px paleturquoise;
   font-family: 'Domine', serif;
-=======
+}
 
 .perspective-text:hover p {
   transform: translate(0, -50px);
@@ -176,7 +176,7 @@ textarea {
 /* Entries */
 .trvl-log{
   text-align:center;
->>>>>>> a246b6976e840c8230b640b2e7cec79cc86bdd90
+
 }
 figcaption {
   font-size: 24px;
@@ -211,11 +211,10 @@ justify-content: space-around;
   background: #E1E1E1;
   box-sizing: border-box;
   padding: 2%;
-<<<<<<< HEAD
   box-shadow: 2px 2px 4px black;
   background-color: #FFEBCD;
 
-=======
+
   box-shadow: 5px 5px 5px #786BD6;
   border-radius: 4px;
 
@@ -226,7 +225,7 @@ h2 {
 	font: 100px Helvetica, Sans-Serif;
 	letter-spacing: -5px;
 	color: rgba(0,0,255,0.5);
->>>>>>> a246b6976e840c8230b640b2e7cec79cc86bdd90
+
 }
 
 h2:after {
@@ -246,10 +245,12 @@ button {
   padding: 40px;
   padding-left:70px;
   padding-right: 70px;
-  height: 475px;
+  height: 785px;
   margin:30px;
-  margin-right:30px;
+  font-size: 18px;
+
   margin-bottom: 70px;
   background-color: #E1E1E1;
-  line-height:2;
+  margin-left: 180px;
+
 }
