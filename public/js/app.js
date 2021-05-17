@@ -73,8 +73,9 @@ updateTrvl = event => {
       logIn={this.logIn}
       signUp={this.signUp}
       handleChange={this.handleChange}
+      currentUser={this.state.currentUser.username}
     ></Header>
-    <h4>{this.state.currentUser.username}</h4>
+
     <Logo></Logo>
     <div id='travelLog'>
     <h3>Create New Travel Log</h3>
