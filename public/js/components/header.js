@@ -39,11 +39,8 @@ class Header extends React.Component {
       <ul id="nav-ul">
         <li id="nav-li"><a className='active' href='/'>TRVL</a></li>
         <li id="nav-li"><a  href='#about'>About Us</a></li>
-
-        {this.state.currentUser !== {} ? 
-        <h4>{this.props.currentUser}</h4> : null}
-
-
+        <li id='nav-li1'>{this.props.currentUser}
+        </li>
         <li id="nav-li" style={{float: "right"}}>
           <details>
           <br />
