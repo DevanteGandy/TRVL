@@ -5,7 +5,8 @@ const scroll = () => {
 class Header extends React.Component {
   listener = null;
   state = {
-    nav:false
+    nav:false,
+    logout:"http://trvls-project.herokuapp.com/"
   }
 
 
@@ -38,17 +39,12 @@ class Header extends React.Component {
       <ul id="nav-ul">
         <li id="nav-li"><a className='active' href='/'>TRVL</a></li>
         <li id="nav-li"><a  href='#about'>About Us</a></li>
-        <li id="nav-li"><a  href='#contact'>Contact</a></li>
-        {this.props.currentUser !== {} ? (
-        <h3 id="nav-li">
-          {this.props.currentUser}
-        </h3>
-      ) : null
 
-    }
+        {this.state.currentUser !== {} ? 
+        <h4>{this.props.currentUser}</h4> : null}
 
 
-              <li id="nav-li" style={{float: "right"}}>
+        <li id="nav-li" style={{float: "right"}}>
           <details>
           <br />
             <summary>Sign Up</summary>
