@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #9365F6;
+  background-color: #786BD6;
 }
 
 .Nav {
@@ -32,6 +32,14 @@
   padding: 14px 16px;
   text-decoration: none;
 }
+
+#nav-li1 {
+  display: block;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
 
 #nav-li, a:hover {
   background-color: #786BD6;

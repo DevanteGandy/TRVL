@@ -73,6 +73,7 @@ updateTrvl = event => {
       logIn={this.logIn}
       signUp={this.signUp}
       handleChange={this.handleChange}
+      currentUser={this.state.currentUser.username}
     ></Header>
     <h3 id='title'>{this.state.currentUser.username}</h3>
     <Logo></Logo>
