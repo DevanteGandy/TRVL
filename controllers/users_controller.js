@@ -13,7 +13,10 @@ users.get('/login', (req, res) =>{
 
 
 
+
 users.post('/', (req,res)=>{
+
+
   req.body.username = req.body.username
   req.body.password = bcrypt.hashSync(
     req.body.password,

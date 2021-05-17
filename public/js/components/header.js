@@ -5,14 +5,20 @@ const scroll = () => {
 class Header extends React.Component {
   listener = null;
   state = {
-    nav:false
+    nav:false,
+    logout:"http://trvls-project.herokuapp.com/"
   }
+
+
   componentDidMount() {
      window.addEventListener("scroll", this.handleScroll);
    }
+
+
    componentWillUnmount() {
       window.removeEventListener('scroll');
     }
+
    handleScroll= () => {
      if (window.pageYOffset > 140) {
          if(!this.state.nav){

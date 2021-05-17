@@ -1,5 +1,8 @@
 class About extends React.Component {
-
+user = {
+  linkedin:"https://www.linkedin.com/in/charlie-arboleda-216967203/",
+  linkedin2: "https://www.linkedin.com/in/devante-gandy-0bbb8720a/"
+}
 
 
 
@@ -23,7 +26,8 @@ class About extends React.Component {
               <p>devantegandyio@gmail.com</p>
               <p>
               <button className='pButton'>
-              Connect
+              <a className="pButton" href={this.user.linkedin2}>  Connect
+                </a>
               </button>
               </p>
               </div>
@@ -38,9 +42,12 @@ class About extends React.Component {
                 <p className='pTitle'>Software Engineer</p>
                 <p>llzsultanzll@gmail.com</p>
                 <p>
-                <button className='pButton'>
-                Connect
+                <button  className='pButton'>
+
+                <a className="pButton" href={this.user.linkedin}>  Connect
+                  </a>
                 </button>
+
                 </p>
                 </div>
             </div>
